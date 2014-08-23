@@ -16,12 +16,15 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	public static int width = 1000;
 	public static int height = 600;
 
+	public static boolean titleScreen = true;
 
 	public void init() {
 		setSize(width, height);
 		addKeyListener(this);
 		setFocusable(true);
 		setBackground(c);
+		Images.load();
+		TitleScreen.load();
 	}
 
 	public void start() {
@@ -36,7 +39,7 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	public void run() {
 		Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
 		while (true) {
-			update();
+			repaint();
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
@@ -46,12 +49,15 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 		}
 	}
 
-	public void update() {
-		repaint();
-	}
-
 	public void paint(Graphics g) {
-		Update.updateGame(g);
+		if(titleScreen){
+			TitleScreen.render(g);
+		}
+		else{
+			setBackground(Color.red);
+			Update.updateGame(g);
+		}
+		
 	}
 
 	public void update(Graphics g) {
