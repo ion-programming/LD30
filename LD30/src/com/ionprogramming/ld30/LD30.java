@@ -25,6 +25,7 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 		setBackground(c);
 		Images.load();
 		TitleScreen.load();
+
 	}
 
 	public void start() {
@@ -73,14 +74,14 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	}
 
 	public void keyPressed(KeyEvent e) {
-		
+		Input.keyPressed(e);
 	}
 
 	public void keyReleased(KeyEvent e) {
-		
+		Input.keyReleased(e);
 	}
 
 	public void keyTyped(KeyEvent e) {
-
+		Input.keyTyped(e);
 	}
 }
