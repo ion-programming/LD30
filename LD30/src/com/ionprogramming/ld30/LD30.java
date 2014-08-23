@@ -13,9 +13,15 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	private Image dbImage;
 	private Graphics dbg;
 	
+<<<<<<< Upstream, based on origin/master
 	public static int width = 800;
 	public static int height = 500;
 	public Color c = new Color(0x000000);
+=======
+	public static int width = 1000;
+	public static int height = 600;
+	public Color c = new Color(0x2980b9);
+>>>>>>> 1ed473b This is a useless message
 
 
 	public void init() {

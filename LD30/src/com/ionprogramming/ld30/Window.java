@@ -27,7 +27,7 @@ public class Window extends JFrame {
 
 	public Window() {
 		LD30 game = new LD30();
-		setTitle("#LD40 - Ion Programming");
+		setTitle("#LD30 - Ion Programming");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(30, 30, LD30.width + 6, LD30.height + 26);
