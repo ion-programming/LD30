@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 public class Window extends JFrame {
 	static final long serialVersionUID = 1L;
-
+	static LD30 game;
 	private JPanel contentPane;
 	
 	
@@ -26,7 +26,7 @@ public class Window extends JFrame {
 	}
 
 	public Window() {
-		LD30 game = new LD30();
+		game = new LD30();
 		setTitle("#LD30 - Ion Programming");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

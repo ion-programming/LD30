@@ -55,10 +55,8 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 			TitleScreen.render(g);
 		}
 		else{
-			setBackground(Color.red);
 			Update.updateGame(g);
 		}
-		
 	}
 
 	public void update(Graphics g) {

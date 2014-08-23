@@ -1,5 +1,6 @@
 package com.ionprogramming.ld30;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.Random;
@@ -75,6 +76,7 @@ public class TitleScreen {
 		}
 		else if(stage == 2){
 			LD30.titleScreen = false;
+			Window.game.setBackground(new Color(0x5BA2FF));
 		}
 	}
 	

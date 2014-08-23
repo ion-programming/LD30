@@ -12,12 +12,12 @@ public class Map {
 	
 	public static void draw(Graphics g){
 		int y = 0;
-		while(y < Images.map1.getHeight() && Images.map1.getRGB(playerX, y) == 0x00FFFFFF){
+		while(y < Images.map1.getHeight() && Images.map1.getRGB(playerX + playerXFree + (Window.game.getWidth() - XFREERANGE)/2, y) == 0x00FFFFFF){
 			y++;
 		}
 		playerY = y + MAXHEIGHTRANGE;
 		g.drawImage(Images.map1, -playerX, -playerY, null);
+		g.fillRect(playerXFree + (Window.game.getWidth() - XFREERANGE)/2 - 10, 244, 20, 30);
 	}
-	
 	
 }
