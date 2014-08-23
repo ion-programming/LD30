@@ -1,4 +1,4 @@
-package com.ionprogramming.ld29;
+package com.ionprogramming.ld30;
 
 import java.applet.Applet;
 import java.awt.Color;
@@ -6,8 +6,6 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
-import com.ionprogramming.ld29.graphics.Images;
 
 public class LD30 extends Applet implements Runnable, KeyListener {
 	private static final long serialVersionUID = 1L;
@@ -25,9 +23,6 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 		addKeyListener(this);
 		setFocusable(true);
 		setBackground(c);
-
-		Images.load();
-	
 	}
 
 	public void start() {
@@ -73,11 +68,11 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	}
 
 	public void keyPressed(KeyEvent e) {
-		Input.keyPressed(e);
+		
 	}
 
 	public void keyReleased(KeyEvent e) {
-		Input.keyReleased(e);
+		
 	}
 
 	public void keyTyped(KeyEvent e) {

@@ -1,4 +1,4 @@
-package com.ionprogramming.ld29;
+package com.ionprogramming.ld30;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -16,12 +16,8 @@ public class Window extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-
-
 					Window frame = new Window();
 					frame.setVisible(true);
-					
-
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -40,9 +36,6 @@ public class Window extends JFrame {
 		setContentPane(contentPane);
 		contentPane.add(game);
 		game.setVisible(true);
-		
-		
-		
 		game.init();
 		game.start();
 	}
