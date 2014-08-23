@@ -15,7 +15,7 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	
 	public static int width = 800;
 	public static int height = 500;
-	public Color c = new Color(0x2980b9);
+	public Color c = new Color(0x000000);
 
 
 	public void init() {
