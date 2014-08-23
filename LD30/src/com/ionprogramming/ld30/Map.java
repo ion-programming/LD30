@@ -9,7 +9,6 @@ public class Map {
 	public static int playerXFree = XFREERANGE/2;
 	public static int playerY = 0;
 	
-	
 	public static void draw(Graphics g){
 		int y = 0;
 		while(y < Images.map1.getHeight() && Images.map1.getRGB(playerX + playerXFree + (Window.game.getWidth() - XFREERANGE)/2, y) == 0x00FFFFFF){
