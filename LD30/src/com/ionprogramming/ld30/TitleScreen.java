@@ -23,7 +23,6 @@ public class TitleScreen {
 	static int stage = 99;
 	static int iCount = 0;
 	
-	static int numCloud = 5;
 	
 	public static void load(){
 		r = new Random();
@@ -76,27 +75,14 @@ public class TitleScreen {
 				}
 			}
 			if(a){
-				stage = 2;
 				Window.game.setBackground(new Color(0x2D85FF));
-				for(int c = 0; c < numCloud; c++){
+				for(int c = 0; c < Update.numCloud; c++){
 					Update.clouds.add(new Cloud(Generate.gen(), r.nextInt(1600)-400, r.nextInt(300)-150, 0, r.nextDouble() + 0.2));
 				}
+				LD30.titleScreen = false;
 			}
 		}
-		else if(stage == 2){
-			//Title Screen
-			int a = numCloud - Update.clouds.size();;
-			while(a > 0){
-				Update.clouds.add(new Cloud(Generate.gen(), 1000, r.nextInt(300)-150, 0, r.nextDouble() + 0.2));
-				a--;
-			}
-			for(int c = 0; c < Update.clouds.size(); c++){
-				if(Update.clouds.get(c).draw(g)){
-					c--;
-				}
-			}
-			
-		}
+
 	}
 	
 }
