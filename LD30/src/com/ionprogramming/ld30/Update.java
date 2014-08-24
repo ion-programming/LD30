@@ -21,7 +21,7 @@ public class Update {
 	static int walkTick = 0;
 	
 	public static void updateGame(Graphics g){
-	
+		g.drawImage(Images.sun, 700, -50, null);
 		int a = numCloud - Update.clouds.size();
 		while(a > 0){
 			Update.clouds.add(new Cloud(Generate.gen(), 1000, r.nextInt(300)-150, 0, r.nextDouble() + 0.2));

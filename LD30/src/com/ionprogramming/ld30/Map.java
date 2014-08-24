@@ -13,7 +13,7 @@ public class Map {
 	
 	public static void draw(Graphics g){
 		int y = 0;
-		while(y < Images.map1.getHeight() && Images.map1.getRGB(playerX + playerXFree + (Window.game.getWidth() - XFREERANGE)/2, y) == 0x00FFFFFF){
+		while(y < Images.map1.getHeight() && Images.map1.getRGB(playerX + playerXFree + (Window.game.getWidth() - XFREERANGE)/2, y) == 0x00000000){
 			y++;
 		}
 
@@ -25,7 +25,6 @@ public class Map {
 		else{
 			g.drawImage(Images.player[playerimg], playerXFree + (Window.game.getWidth() - XFREERANGE)/2 - 37, 210, null);
 		}
-
 	}
 	
 }
