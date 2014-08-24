@@ -14,8 +14,8 @@ public class Map {
 		while(y < Images.map1.getHeight() && Images.map1.getRGB(playerX + playerXFree + (Window.game.getWidth() - XFREERANGE)/2, y) == 0x00FFFFFF){
 			y++;
 		}
-		playerY = y + MAXHEIGHTRANGE;
-		g.drawImage(Images.map1, -playerX, -playerY, null);
+		playerY = y;
+		g.drawImage(Images.map1, -playerX, -playerY - MAXHEIGHTRANGE, null);
 		g.fillRect(playerXFree + (Window.game.getWidth() - XFREERANGE)/2 - 10, 244, 20, 30);
 	}
 	

@@ -12,8 +12,8 @@ public class Images {
 	public static BufferedImage map1;
 	public static BufferedImage titleLoad;
 	public static BufferedImage title;
-	
-
+	public static BufferedImage bf1;
+	public static BufferedImage bf2;
 	
 	public static void load(){
 		try {
@@ -23,6 +23,8 @@ public class Images {
 			titleLoad = ImageIO.read(Images.class.getClassLoader().getResourceAsStream("res/title.png"));
 			title = new BufferedImage(titleLoad.getWidth(), titleLoad.getHeight(), BufferedImage.TYPE_INT_ARGB);
 			title.getGraphics().drawImage(titleLoad, 0, 0, null);
+			bf1 = ImageIO.read(Images.class.getClassLoader().getResourceAsStream("res/buttfly1.png"));
+			bf2 = ImageIO.read(Images.class.getClassLoader().getResourceAsStream("res/buttfly2.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

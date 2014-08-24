@@ -40,7 +40,8 @@ public class ImageHandler {
     }
 	
 	public static BufferedImage replaceColor(BufferedImage srcBuf, int cSearch, int cReplace){
-	    int[] srcRGB = srcBuf.getRGB(0, 0, srcBuf.getWidth(), srcBuf.getHeight(), null, 0, srcBuf.getWidth());
+		
+		int[] srcRGB = srcBuf.getRGB(0, 0, srcBuf.getWidth(), srcBuf.getHeight(), null, 0, srcBuf.getWidth());
 
 	    int[] dstRGB = new int[srcRGB.length];
 	    int[] dstA = new int[dstRGB.length];

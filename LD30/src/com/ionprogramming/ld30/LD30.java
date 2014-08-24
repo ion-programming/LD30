@@ -15,6 +15,7 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 	public Color c = new Color(0x000000);
 	public static int width = 1000;
 	public static int height = 600;
+	public static Butterfly butt;
 
 	public static boolean titleScreen = true;
 
@@ -25,7 +26,7 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 		setBackground(c);
 		Images.load();
 		TitleScreen.load();
-
+		butt = new Butterfly(500, 100);
 	}
 
 	public void start() {
@@ -56,6 +57,7 @@ public class LD30 extends Applet implements Runnable, KeyListener {
 		}
 		else{
 			Update.updateGame(g);
+			butt.draw(g);
 		}
 	}
 
