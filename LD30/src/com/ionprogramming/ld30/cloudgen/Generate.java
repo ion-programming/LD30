@@ -10,20 +10,20 @@ import java.util.Random;
 public class Generate {
 	
 	static Random random = new Random();
-	static int width = 300;
+	static int width = 400;
 	static int height = 150;
-	static int particleW = 50;
+	static int particleW = 60;
 	static int particleH = 20;
 	static boolean particleR = false;
 	static double innerP = 0.02f;
-	static double outerP = -0.001f;
+	static double outerP = -0.002f;
 	static int red = 255;
 	static int green = 255;
 	static int blue = 255;
 	static int alpha = 40;
 	static int alphaCut = 101;
-	static int blur = 2;
-	static int blurIt = 3;
+	static int blur = 3;
+	static int blurIt = 2;
 
 	public static BufferedImage gen(){
 		BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB_PRE);

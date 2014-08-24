@@ -1,8 +1,13 @@
 package com.ionprogramming.ld30;
 
 import java.awt.Graphics;
+import java.util.ArrayList;
+
+import com.ionprogramming.ld30.cloudgen.Cloud;
 
 public class Update {
+	
+	public static ArrayList<Cloud> clouds = new ArrayList<Cloud>();
 	
 	public static void updateGame(Graphics g){
 		if(Input.right && !Input.left){
