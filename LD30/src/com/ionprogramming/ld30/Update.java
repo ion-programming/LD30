@@ -35,7 +35,8 @@ public class Update {
 		
 		if(Input.right && !Input.left){
 			trans -= 0.01;
-		
+			Cloud.right = true;
+			Cloud.left = false;
 			Map.playerXFree += 5;
 			if(Map.playerXFree > Map.XFREERANGE){
 				Map.playerX += Map.playerXFree - Map.XFREERANGE;
@@ -44,12 +45,17 @@ public class Update {
 		}
 		else if(!Input.right && Input.left){
 			trans -= 0.01;
-			
+			Cloud.left = true;
+			Cloud.right = false;
 			Map.playerXFree -= 5;
 			if(Map.playerXFree < 0){
 				Map.playerX += Map.playerXFree;
 				Map.playerXFree = 0;
 			}
+		}
+		else{
+			Cloud.left = false;
+			Cloud.right = false;
 		}
 		Map.draw(g);
 		if(trans >= 0.005f){
