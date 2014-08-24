@@ -14,6 +14,9 @@ public class Images {
 	public static BufferedImage title;
 	public static BufferedImage bf1;
 	public static BufferedImage bf2;
+	public static BufferedImage playerTiles;
+	public static BufferedImage[] player;
+	
 	
 	public static void load(){
 		try {
@@ -25,6 +28,8 @@ public class Images {
 			title.getGraphics().drawImage(titleLoad, 0, 0, null);
 			bf1 = ImageIO.read(Images.class.getClassLoader().getResourceAsStream("res/buttfly1.png"));
 			bf2 = ImageIO.read(Images.class.getClassLoader().getResourceAsStream("res/buttfly2.png"));
+			playerTiles = ImageIO.read(Images.class.getClassLoader().getResourceAsStream("res/player.png"));
+			player = ImageHandler.splitImage(playerTiles, 4, 2, 1);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

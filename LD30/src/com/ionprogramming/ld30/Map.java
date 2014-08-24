@@ -8,6 +8,8 @@ public class Map {
 	public static int playerX = 0;
 	public static int playerXFree = XFREERANGE/2;
 	public static int playerY = 0;
+	public static int playerimg = 0;
+	public static boolean left = false;
 	
 	public static void draw(Graphics g){
 		int y = 0;
@@ -17,7 +19,12 @@ public class Map {
 
 		playerY = y;
 		g.drawImage(Images.map1, -playerX, -playerY - MAXHEIGHTRANGE, null);
-		g.fillRect(playerXFree + (Window.game.getWidth() - XFREERANGE)/2 - 10, 244, 20, 30);
+		if(left){
+			g.drawImage(Images.player[playerimg+4], playerXFree + (Window.game.getWidth() - XFREERANGE)/2 - 37, 210, null);
+		}
+		else{
+			g.drawImage(Images.player[playerimg], playerXFree + (Window.game.getWidth() - XFREERANGE)/2 - 37, 210, null);
+		}
 
 	}
 	
