@@ -7,6 +7,10 @@ import java.util.Random;
 public class Butterfly {
 	
 	static Random r = new Random();
+	public final double RANGE = 30;
+	public final double speed = 2;
+	public double initx;
+	public double inity;
 	public double x;
 	public double y;
 	public double xvel = 0;
@@ -17,6 +21,8 @@ public class Butterfly {
 	public Butterfly(double x, double y){
 		this.x = x;
 		this.y = y;
+		initx = x;
+		inity = y;
 		int c1 = r.nextInt(0xFFFFFF);
 		int c2 = r.nextInt(0xFFFFFF);
 		int c3 = r.nextInt(0xFFFFFF);
@@ -26,9 +32,26 @@ public class Butterfly {
 	
 	public void draw(Graphics g){
 		if(x - Map.playerX > -7 && x - Map.playerX < LD30.width && y - Map.playerY > -7 && y - Map.playerY < LD30.height){
-			
+			if(r.nextInt(50) == 0){
+				xvel = (r.nextDouble() - 0.5)*speed;
+			}
+			if(r.nextInt(50) == 0){
+				yvel = (r.nextDouble() - 0.5)*speed;
+			}
 			x+= xvel;
 			y+= yvel;
+			if(x > initx + RANGE){
+				x = initx + RANGE;
+			}
+			else if(x < initx - RANGE){
+				x = initx - RANGE;
+			}
+			if(y > inity + RANGE){
+				y = inity + RANGE;
+			}
+			else if(y < inity - RANGE){
+				y = inity - RANGE;
+			}
 			if(timer < 5){
 				g.drawImage(bf1, (int) x - Map.playerX, (int) y - Map.playerY, null);
 			}
